@@ -3,6 +3,7 @@
 @import "header.css";
 @import "animation.css";
 @import "hero.css";
+@import "features.css";
 
 :root {
     --darkBlue: hsl(233, 26%, 24%);

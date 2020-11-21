@@ -1,6 +1,8 @@
 @import "style.css";
 
-.hero {}
+.hero {
+    background-color: rgba(238, 238, 238, 0.319);
+}
 
 .hero .hero__image {
     background-image: url(/images/bg-intro-mobile.svg);
@@ -20,7 +22,7 @@
     height: 100%;
     width: 100%;
     background-image: url(/images/image-mockups.png);
-    background-size: 90%;
+    background-size: 93%;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -34,17 +36,78 @@
 }
 
 .hero__text h1 {
-    font-weight: 300;
-    line-height: 1.15;
-    color: var(--darkBlue);
-    font-size: 2.31rem;
     margin-bottom: 1.5rem;
+    line-height: 1.15;
+    font-size: 2.31rem;
+    font-weight: 300;
+    color: var(--darkBlue);
 }
 
 .hero p {
-    line-height: 1.5;
     margin-bottom: 2.25rem;
+    line-height: 1.5;
+}
+
+/* ! DESKTOP */
+
+@media screen and (min-width: 1024px) {
+
+
+    .hero {
+        display: flex;
+        justify-content: first baseline;
+        align-items: center;
+    }
+
+    .hero .hero__image {
+        height: 40rem;
+        order: 2;
+        flex: 3;
+        background-image: url(/images/bg-intro-desktop.svg) !important;
+    }
+
+
+
+    .hero .hero__text {
+        display: block;
+        flex: 2;
+        order: 1;
+        text-align: left;
+    }
+
+    #head {
+        font-size: var(--font-xlg);
+        /* ! 3.25 rem */
+    }
+
+    .hero__text p {
+        font-size: var(--font-med);
+    }
+
+    .hero .hero__image::before {
+        background-size: 75%;
+    }
+
 
 }
 
-.head-btn {}
+
+
+
+
+/* ! TABLETS */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .hero__image {
+        background-size: 80% !important;
+        background-image: url(/images/bg-intro-desktop.svg) !important;
+    }
+
+    .hero__image::before {
+        height: 80%;
+        background-size: 50% !important;
+    }
+
+
+}

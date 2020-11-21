@@ -40,10 +40,7 @@
     opacity: 0;
 }
 
-nav {
 
-    /* border-bottom: 1px solid black; */
-}
 
 
 
@@ -152,53 +149,19 @@ button,
 }
 
 
-/* ! UP  large screen */
+/* ! DESKTOP */
 
 @media screen and (min-width: 1024px) {
     .header__menu {
         display: none;
     }
 
-    .hero {
-        display: flex;
-        justify-content: first baseline;
-        align-items: center;
-    }
-
-    .hero .hero__image {
-        height: 40rem;
-        order: 2;
-        flex: 3;
-        background-image: url(/images/bg-intro-desktop.svg) !important;
-
-    }
-
-
-
-    .hero .hero__text {
-        display: block;
-        flex: 2;
-        order: 1;
-        text-align: left;
-    }
-
-    #head {
-        font-size: var(--font-xlg);
-        /* ! 3.25 rem */
-    }
-
-    .hero__text p {
-        font-size: var(--font-med);
-    }
-
-    .hero .hero__image::before {
-        background-size: 82% !important;
-    }
 }
 
 /* ! down  medium screen */
 
 @media screen and (max-width: 1024px) {
+
     .header__links {
         display: none;
     }
@@ -215,3 +178,7 @@ button,
         display: block;
     }
 }
+
+/* ! TABLETS */
+
+@media (min-width: 768px) and (max-width: 1024px) {}
