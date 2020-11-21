@@ -1,0 +1,217 @@
+:root {
+    --darkBlue: hsl(233, 26%, 24%);
+    --limeGreen: hsl(136, 65%, 51%);
+    --brightCyan: hsl(192, 70%, 51%);
+    --garishBlue: hsl(233, 8%, 62%);
+    --lightgraishBlue: hsl(220, 16%, 96%);
+    --white: #ffffff;
+    --font-sm: 0.875rem;
+    --font-med: 1.125rem;
+    --small: 40em;
+    --medium: 40em;
+    --large: 64em;
+    --xlarge: 87.5em;
+    --small-d: 39.9375em;
+    --medium-d: 63.9375em;
+    --large-d: 87.5em;
+}
+
+.header__logo {}
+
+.header__menu>span {
+    display: block;
+    width: 24px;
+    height: 2.2666px;
+    background-color: var(--darkBlue);
+    margin: 3.1px 0;
+    transition: all 300ms ease-in-out;
+    transform-origin: 4px center;
+}
+
+.open span:first-child {
+    transform: rotate(45deg);
+}
+
+.open span:last-child {
+    transform: rotate(-45deg);
+}
+
+.open span:nth-child(2) {
+    opacity: 0;
+}
+
+nav {
+
+    /* border-bottom: 1px solid black; */
+}
+
+
+
+.header__links a {
+    position: relative;
+    font-size: var(--font-sm);
+    color: var(--garishBlue);
+    text-transform: capitalize;
+    margin: 0 16px;
+    transition: color 300ms ease-in-out;
+}
+
+.header__links a:hover {
+    color: var(--darkBlue);
+}
+
+.header__links a:hover::before {
+    opacity: 1;
+}
+
+.header__links a::before {
+    transition: opacity 300ms ease-in-out;
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    opacity: 0;
+    /* set opacity to 0 initially */
+    height: 5px;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+}
+
+nav {
+    padding: 1.0625rem 1.5rem;
+    box-sizing: border-box;
+    height: auto;
+    place-items: center;
+}
+
+button,
+.button {
+    /* margin: auto; */
+    font-weight: 700;
+    border: 0;
+    color: white;
+    text-transform: capitalize;
+    padding: 0.675rem 1.875rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+}
+
+.button:hover {
+    opacity: 0.5;
+}
+
+
+.header__cta {
+    font-size: var(--font-sm);
+    transition: opacity 300ms ease-in-out;
+}
+
+.overlay {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    /* background-color: var(--darkBlue); */
+    background-image: linear-gradient(to bottom, var(--darkBlue), transparent);
+    position: fixed;
+    top: 3.6rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 200ms ease-in-out;
+    z-index: 3;
+}
+
+.fade-in {
+    animation: fade-in 200ms ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fade-out 200ms ease-in-out forwards;
+}
+
+.header__menu_bk {
+    background-color: var(--white);
+    padding: 1.225rem 0;
+    margin: 0.6rem 0;
+    position: absolute;
+    width: 85%;
+    border-radius: 5px;
+    z-index: 4;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1.4rem;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    visibility: hidden;
+}
+
+.header__menu_bk a {
+    display: block;
+    color: var(--darkBlue);
+    padding: 0.625rem;
+}
+
+
+/* ! UP  large screen */
+
+@media screen and (min-width: 1024px) {
+    .header__menu {
+        display: none;
+    }
+
+    .hero {
+        display: flex;
+        justify-content: first baseline;
+        align-items: center;
+    }
+
+    .hero .hero__image {
+        height: 40rem;
+        order: 2;
+        flex: 3;
+        background-image: url(/images/bg-intro-desktop.svg) !important;
+
+    }
+
+
+
+    .hero .hero__text {
+        display: block;
+        flex: 2;
+        order: 1;
+        text-align: left;
+    }
+
+    #head {
+        font-size: var(--font-xlg);
+        /* ! 3.25 rem */
+    }
+
+    .hero__text p {
+        font-size: var(--font-med);
+    }
+
+    .hero .hero__image::before {
+        background-size: 82% !important;
+    }
+}
+
+/* ! down  medium screen */
+
+@media screen and (max-width: 1024px) {
+    .header__links {
+        display: none;
+    }
+
+    .hide-for-mobile {
+        display: none;
+    }
+
+    .overlay {
+        display: block;
+    }
+
+    .h-d {
+        display: block;
+    }
+}

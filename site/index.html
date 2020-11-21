@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+            initial-scale=1.0">
+        <title>Easy bank</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap"
+            rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header class="header">
+
+            <nav class="nav flex jc-sb ai-c">
+                <a href="/" class="header__logo"><img
+                        src="images/logo.svg" alt="easy bank"></a>
+
+                <a id="btnHamburgerhref" href="#"
+                    class="header__menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+
+
+                <div class="header__links">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Career</a>
+                </div>
+
+                <a class="button header__cta hide-for-mobile"
+                    href="#"> Request invite</a>
+            </nav>
+            <div class="header__menu_bk ta-c h-d">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Blog</a>
+                <a href="#">Career</a>
+            </div>
+            <div class="overlay">
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero__image">
+            </div>
+            <div class="hero__text container">
+                <h1 id="head">Next generation digital banking</h1>
+                <p>Take your financial life online. Your
+                    Easybank account will be a one-stop-shop
+                    for spending, saving, budgeting, investing, and
+                    much more.</p>
+                <a href="#" class="button head-btn ta-c">Request
+                    invite</a>
+            </div>
+        </section>
+
+
+
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function () {
+            $('#btnHamburgerhref').click(function clickedHamburger(params) {
+                if (!$(this).hasClass("open")) {
+                    $(this).addClass("open");
+                    $('.overlay').addClass("fade-in");
+                    $('.header__menu_bk').addClass("fade-in");
+                    $('.header__menu_bk').removeClass("fade-out");
+                    $('.overlay').removeClass("fade-out");
+                    stopScrolling();
+                } else {
+                    $(this).removeClass("open");
+                    $('.overlay').addClass("fade-out");
+                    $('.header__menu_bk').addClass("fade-out");
+                    backScrolling();
+                }
+            });
+        });
+
+        function stopScrolling() {
+            $('body').addClass("o-h");
+        }
+
+        function backScrolling() {
+            $('body').removeClass("o-h");
+        }
+    </script>
+    </body>
+
+
+</html>
