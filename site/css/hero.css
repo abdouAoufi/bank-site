@@ -101,7 +101,7 @@
 
     .hero__image {
         background-size: 80% !important;
-        background-image: url(/images/bg-intro-desktop.svg) !important;
+        background-image: url(images/bg-intro-desktop.svg) !important;
     }
 
     .hero__image::before {

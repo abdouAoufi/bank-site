@@ -4,6 +4,7 @@
 @import "animation.css";
 @import "hero.css";
 @import "features.css";
+@import "articles.css";
 
 :root {
     --darkBlue: hsl(233, 26%, 24%);
