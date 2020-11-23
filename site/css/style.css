@@ -5,6 +5,7 @@
 @import "hero.css";
 @import "features.css";
 @import "articles.css";
+@import "footer.css";
 
 :root {
     --darkBlue: hsl(233, 26%, 24%);

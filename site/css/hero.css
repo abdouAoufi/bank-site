@@ -97,15 +97,15 @@
 
 /* ! TABLETS */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 670px) and (max-width: 1024px) {
 
     .hero__image {
         background-size: 80% !important;
-        background-image: url(images/bg-intro-desktop.svg) !important;
+
     }
 
     .hero__image::before {
-        height: 80%;
+        height: 60%;
         background-size: 50% !important;
     }
 
