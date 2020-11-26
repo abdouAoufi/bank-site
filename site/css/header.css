@@ -62,16 +62,16 @@
 }
 
 .header__links a::before {
-    transition: opacity 300ms ease-in-out;
     position: absolute;
-    content: "";
-    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
-    opacity: 0;
-    /* set opacity to 0 initially */
     height: 5px;
     left: 0;
     right: 0;
-    bottom: -20px;
+    bottom: -25px;
+    opacity: 0;
+    content: "";
+    transition: opacity 300ms ease-in-out;
+    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    /* set opacity to 0 initially */
 }
 
 nav {
@@ -84,12 +84,12 @@ nav {
 button,
 .button {
     /* margin: auto; */
-    font-weight: 550;
-    border: 0;
-    color: white;
-    text-transform: capitalize;
     padding: 0.675rem 1.875rem;
     border-radius: 50px;
+    font-weight: 550;
+    border: 0;
+    text-transform: capitalize;
+    color: white;
     background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
 }
 

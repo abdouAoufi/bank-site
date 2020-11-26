@@ -74,14 +74,16 @@ footer>div {}
 }
 
 .btn {
-    font-weight: 500;
+    display: block;
+    margin-top: 10px;
     border: 0;
-    color: white;
+    font-weight: 500;
     text-transform: capitalize;
     padding: 0.775rem 1.875rem;
     border-radius: 50px;
-    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
     transition: 0.15s;
+    color: white;
+    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
 }
 
 .btn:hover {
@@ -147,7 +149,6 @@ footer>div {}
         align-self: end;
         text-align: center;
         justify-self: end;
-
     }
 
 }
